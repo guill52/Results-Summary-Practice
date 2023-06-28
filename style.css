@@ -1,0 +1,262 @@
+*{
+    margin: 0;
+    padding: 0;
+
+    ---result-row-one: hsl(0, 100%, 67%, .08);
+    ---result-row-two: hsl(39, 100%, 56%, .08);
+    ---result-row-three: hsl(166, 100%, 37%, .08);
+    ---result-row-four: hsl(234, 85%, 45%, .08);
+
+    ---white: hsl(0, 0%, 100%);
+    ---pale-blue: hsl(221, 100%, 96%);
+    ---light-lavender: hsl(241, 100%, 89%);
+    ---dark-gray-blue: hsl(224, 30%, 27%);
+
+    ---font-size: 18px;
+    ---font-family: 'Hanken Grotesk', sans-serif;
+
+}
+
+body{
+    font-family: var(---font-family);
+    /* color: var(---white); */
+}
+p{
+    font-size: var(---font-size);
+}
+
+.result-summary-component{
+    width: 100vw;
+    height: 100vh;
+}
+
+.result-summary-component{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.result-summary-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 50rem;
+    height: 30rem;
+    border-radius: 40px;
+    /* background-color: aliceblue; */
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+
+/* ====================================Left Side */
+
+.left-result-container, .right-result-container{
+    margin: auto ;
+    display: grid;
+    text-align: center;
+    /* background-color: antiquewhite; */
+    width: 18rem;
+    height: 25rem;
+    /* outline: 1px solid red; */
+}
+
+
+.inner-left{
+    border-radius: 40px;
+    display: grid;
+    background-color: antiquewhite;
+    background-image: linear-gradient(to top, hsl(241, 81%, 54%), hsl(252, 100%, 67%));
+}
+
+.score-container{
+    width: 10rem;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    flex-wrap: wrap;
+    margin: auto;
+    border-radius: 50%;
+    background-image: linear-gradient(to bottom, hsla(256, 72%, 46%, 1), hsla(256, 72%, 46%, 1), hsla(256, 72%, 46%, 1),hsla(241, 72%, 46%, 0));
+    /* outline: 1px solid green; */
+}
+
+.score-inner{
+    margin: auto;
+    width: 7rem;
+    height: 7rem;
+    /* outline: 1px solid green; */
+}
+
+.score-light-font{
+    color: hsla(241, 100%, 89%, .4);
+}
+
+#score{
+    font-size: 4em;
+    font-weight: 700;
+    /* outline: 1px solid red; */
+}
+
+.summary-report span{
+    font-size: 1.5em;
+}
+.summary-report p{
+    margin: .8rem;
+}
+
+.font-color-white{
+    color: var(---white);
+}
+.font-style-color{
+    color: var(---light-lavender);
+}
+/* ====================================Right Side */
+
+.summary-header{
+    justify-content: left;
+    display: flex;
+}
+
+.result-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3.5rem;
+    border-radius: 5px;
+    margin: 1rem auto;
+}
+
+.bold-font{
+    color: var(---dark-gray-blue);
+    font-weight: 700;
+}
+.result-row-score{
+    color: hsl(224, 30%, 27%, .5);
+}
+
+.red-font{
+    color: hsl(0, 100%, 67%);
+}
+.yellow-font{
+    color: hsl(39, 100%, 56%);
+}
+.green-font{
+    color: hsl(166, 100%, 37%);
+}
+.blue-font{
+    color: hsl(234, 85%, 45%);
+}
+
+.result-container:nth-child(1){
+    background-color: var(---result-row-one);
+}.result-container:nth-child(2){
+    background-color: var(---result-row-two);
+}.result-container:nth-child(3){
+background-color: var(---result-row-three);
+}.result-container:nth-child(4){
+    background-color: var(---result-row-four);
+}
+
+.result-row-left{
+    display: flex;
+    gap: .5rem;
+}
+
+.result-row-left, .result-row-right{
+    margin: auto .5rem auto .5rem;
+}
+
+.continue-btn{
+    border: none;
+    height: 3.3rem;
+    margin-top: 1.3rem;
+    cursor: pointer;
+    color: var(---white);
+    border-radius: 1000px;
+    transition: .2s ease-in;
+    background-image: linear-gradient(to top, hsl(241, 81%, 54%), hsl(252, 100%, 67%));
+}
+
+.continue-btn:active{
+    scale: 90%;
+}
+
+/* ========================================Final Form */
+/* <div class="form-completed-container">
+<div class="form-completed">
+  <h1 class="form-title">Completed!🥳</h1>
+</div> */
+/* </div> */
+
+.form-completed-container{
+    position: fixed;
+    width: 100vw;
+    height: 100vh; 
+    background-color: #FAA613;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: -100vh;
+    transition: .2s ease-in;
+}
+
+.form-completed{
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.form-completed-container.active{
+    bottom: 0;
+}
+
+.form-close{
+    margin-top: 2rem;
+    text-decoration: underline;
+    background: none;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+/* ========================================Media Quiries */
+
+
+@media (max-width: 375px){
+
+    p{
+        font-size: 16px;
+    }
+
+    .result-summary-component{
+        width: 375px;
+        height: 809px;
+    }
+
+    .result-summary-container{
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 375px;
+        height: 809px;
+        box-shadow: none;
+    }
+
+    .inner-left {
+        border-radius: 0 0 40px 40px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    }
+
+    .result-header{
+        margin-top: 1.3rem;
+    }
+    .summary-header{
+        margin-top: 1.3rem;
+    }
+    .continue-btn{
+        background-image: none;
+        background-color: var(---dark-gray-blue);
+        color: var(---white);
+        font-size: 18px;
+        /* margin-bottom: 1rem; */
+    }
+}

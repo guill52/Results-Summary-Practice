@@ -1,0 +1,65 @@
+[
+  {
+    "category": "Reaction",
+    "score": 80,
+    "icon": "./assets/images/icon-reaction.svg"
+  },
+  {
+    "category": "Memory",
+    "score": 92,
+    "icon": "./assets/images/icon-memory.svg"
+  },
+  {
+    "category": "Verbal",
+    "score": 61,
+    "icon": "./assets/images/icon-verbal.svg"
+  },
+  {
+    "category": "Visual",
+    "score": 72,
+    "icon": "./assets/images/icon-visual.svg"
+  }
+]
+
+// =============
+
+
+<!-- <div class="result-container">
+<div class="result-row-left">
+  <img src="./assets/images/icon-reaction.svg" alt="">
+  <p class="red-font">Reaction</p>
+</div>
+<div class="result-row-right">
+  <p class="result-row-score"><span class="bold-font">80 </span>/ 100</p>
+</div>
+</div>
+
+<div class="result-container">
+<div class="result-row-left">
+  <img src="./assets/images/icon-memory.svg" alt="">
+  <p class="yellow-font">Memory</p>
+</div>
+<div class="result-row-right">
+  <p class="result-row-score"><span class="bold-font">92 </span>/ 100</p>
+</div>
+</div>
+
+<div class="result-container">
+<div class="result-row-left">
+  <img src="./assets/images/icon-verbal.svg" alt="">
+  <p class="green-font">Verbal</p>
+</div>
+<div class="result-row-right">
+  <p class="result-row-score"><span class="bold-font">61 </span>/ 100</p>
+</div>
+</div>
+
+<div class="result-container">
+<div class="result-row-left">
+  <img src="./assets/images/icon-visual.svg" alt="">
+  <p class="blue-font">Visual</p>
+</div>
+<div class="result-row-right">
+  <p class="result-row-score"><span class="bold-font">72 </span>/ 100</p>
+</div>
+</div>
